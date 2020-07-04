@@ -1,9 +1,9 @@
 {
-  "name": "backbone",
+  "name": "backbone-web-components",
   "version": "1.0.0",
   "description": "Set of layout helpers using Web Components",
-  "main": "backbone.js",
-  "module": "backbone.js",
+  "browser": "backbone-web-components.js",
+  "module": "backbone-web-components.js",
   "scripts": {
     "test": "npm run build && npm run build:babel-test && wct",
     "build": "tsc && downlevel-dts . ts3.4 && cp tsconfig.json ./ts3.4/",
@@ -18,10 +18,10 @@
     "/src/",
     "!/src/demo/",
     "!/src/test/",
-    "/backbone.d.ts",
-    "/backbone.d.ts.map",
-    "/backbone.js",
-    "/backbone.js.map",
+    "/backbone-web-components.d.ts",
+    "/backbone-web-components.d.ts.map",
+    "/backbone-web-components.js",
+    "/backbone-web-components.js.map",
     "/ts3.4/"
   ],
   "keywords": [],
@@ -39,12 +39,13 @@
     "@webcomponents/webcomponentsjs": "^2.4.3",
     "es-dev-server": "^1.55.1"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com/rodydavis/backbone.git",
+    "url": "git+ssh://git@github.com/rodydavis/backbone.git",
     "directory": "."
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/rodydavis/backbone/issues"
+  },
+  "homepage": "https://github.com/rodydavis/backbone#readme"
 }

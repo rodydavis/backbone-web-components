@@ -1,3 +1,3 @@
-import "../backbone.js";
+import "../backbone-web-components.js";
 
 // console.log("loaded");
