@@ -1,1 +1,1 @@
-export * from "./components/placeholder.js";
+import "./components/placeholder.js";

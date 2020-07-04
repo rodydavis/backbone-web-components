@@ -10,7 +10,8 @@
     "build:watch": "tsc --watch",
     "format": "find src test | grep '\\.js$\\|\\.ts$' | xargs clang-format --style=file -i",
     "lint": "tslint --project ./",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "demo": "es-dev-server --app-index demo/index.html --node-resolve --watch --open"
   },
   "files": [
     "/components/",
@@ -35,6 +36,15 @@
     "downlevel-dts": "^0.4.0"
   },
   "devDependencies": {
-    "@webcomponents/webcomponentsjs": "^2.4.3"
+    "@webcomponents/webcomponentsjs": "^2.4.3",
+    "es-dev-server": "^1.55.1"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/rodydavis/backbone.git",
+    "directory": "."
   }
 }
