@@ -1,0 +1,40 @@
+{
+  "name": "backbone",
+  "version": "1.0.0",
+  "description": "Set of layout helpers using Web Components",
+  "main": "backbone.js",
+  "module": "backbone.js",
+  "scripts": {
+    "test": "npm run build && npm run build:babel-test && wct",
+    "build": "tsc && downlevel-dts . ts3.4 && cp tsconfig.json ./ts3.4/",
+    "build:watch": "tsc --watch",
+    "format": "find src test | grep '\\.js$\\|\\.ts$' | xargs clang-format --style=file -i",
+    "lint": "tslint --project ./",
+    "prepare": "npm run build"
+  },
+  "files": [
+    "/lib/",
+    "/src/",
+    "!/src/demo/",
+    "!/src/test/",
+    "/backbone.d.ts",
+    "/backbone.d.ts.map",
+    "/backbone.js",
+    "/backbone.js.map",
+    "/ts3.4/"
+  ],
+  "keywords": [],
+  "author": "Rody Davis",
+  "license": "ISC",
+  "dependencies": {
+    "lit-element": "^2.3.1",
+    "clang-format": "^1.2.4",
+    "tslint": "^5.20.1",
+    "typescript": "~3.8.2",
+    "web-component-tester": "^6.9.2",
+    "downlevel-dts": "^0.4.0"
+  },
+  "devDependencies": {
+    "@webcomponents/webcomponentsjs": "^2.4.3"
+  }
+}
