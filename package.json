@@ -1,6 +1,6 @@
 {
   "name": "backbone-web-components",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Set of layout helpers using Web Components",
   "browser": "backbone-web-components.js",
   "module": "backbone-web-components.js",
