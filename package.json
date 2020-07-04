@@ -1,6 +1,6 @@
 {
   "name": "backbone-web-components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Set of layout helpers using Web Components",
   "browser": "backbone-web-components.js",
   "module": "backbone-web-components.js",
@@ -10,28 +10,8 @@
     "build:watch": "tsc --watch",
     "format": "find src test | grep '\\.js$\\|\\.ts$' | xargs clang-format --style=file -i",
     "lint": "tslint --project ./",
-    "prepare": "npm run build",
-    "demo": "es-dev-server --app-index demo/index.html --node-resolve --watch --open"
-  },
-  "files": [
-    "/components/",
-    "/src/",
-    "!/src/demo/",
-    "!/src/test/",
-    "/backbone-web-components.d.ts",
-    "/backbone-web-components.d.ts.map",
-    "/backbone-web-components.js",
-    "/backbone-web-components.js.map",
-    "/ts3.4/"
-  ],
-  "keywords": [],
-  "author": "Rody Davis",
-  "license": "ISC",
-  "dependencies": {
-    "lit-element": "^2.3.1",
-    "clang-format": "^1.2.4",
-    "tslint": "^5.20.1",
-    "typescript": "~3.8.2",
+    "prepare": "npm run clean && npm run build",
+    "clean": "rm -r ts3.4 components && rm backbone-web-components.js backbone-web-components.d.ts backbone-web-components.d.ts.map backbone-web-components.js.map",
     "web-component-tester": "^6.9.2",
     "downlevel-dts": "^0.4.0"
   },
@@ -41,11 +21,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/rodydavis/backbone.git",
+    "url": "git+ssh://git@github.com/rodydavis/backbone-web-components.git",
     "directory": "."
   },
   "bugs": {
-    "url": "https://github.com/rodydavis/backbone/issues"
+    "url": "https://github.com/rodydavis/backbone-web-components/issues"
   },
-  "homepage": "https://github.com/rodydavis/backbone#readme"
+  "homepage": "https://github.com/rodydavis/backbone-web-components#readme"
 }
